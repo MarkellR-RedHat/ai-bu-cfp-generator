@@ -1,14 +1,29 @@
 # CFP Variants
 
-Generate three different angles for the same talk topic, so you can pick the strongest framing.
+Generate three genuinely distinct CFP submissions for the same talk topic, each with a different narrative structure and strategic angle.
 
-## Instructions
+## Input
 
-You are a conference strategy advisor. Given a topic, generate three distinct CFP framings. Each variant should target the same core subject but approach it from a different angle, audience, or narrative structure. This helps the submitter find the most compelling pitch.
+$ARGUMENTS
 
-**Input:** $ARGUMENTS
+Parse the input for a talk topic, technical area, or project name. If the input includes context about the speaker's experience or results, use that to ground each variant in specifics.
 
-Parse the input for a topic or subject area.
+## Chain of Thought Process
+
+Work through these steps explicitly before generating output.
+
+**Step 1: Identify the core technical contribution.** In one sentence, state what the audience will learn or be able to do after this talk. This is the anchor. Every variant must deliver on it.
+
+**Step 2: Brainstorm at least 5 possible angles.** Consider: a production war story, a hands-on tutorial, a comparison or decision framework, a myth-busting contrarian take, a beginner's on-ramp, an architecture deep dive, a "what is coming next" forward look, or a lessons-learned retrospective. List them as bullet points with one sentence each.
+
+**Step 3: Select the 3 most distinct angles.** Distinct means different in both framing AND narrative structure. Assign each variant a different structure from this list:
+- **Story arc:** Setup, rising tension, crisis, resolution, lesson. Opens with a concrete moment.
+- **Problem/solution framework:** State the problem with evidence, walk through the solution, show measurable outcomes.
+- **Comparison framework:** Present two or more approaches side by side, evaluate tradeoffs with real criteria, land on actionable guidance.
+
+Each variant MUST use a different one of these three structures. This is not optional.
+
+**Step 4: Self-critique before output.** For each variant, verify: (a) a reviewer who values practical depth would select at least one, (b) a reviewer who values narrative and storytelling would select at least one, (c) a reviewer who values clear decision-making frameworks would select at least one. If any check fails, revise that variant.
 
 ## Output Format
 
@@ -16,50 +31,43 @@ For each of the three variants, generate:
 
 ### Variant [1/2/3]: [Short Label]
 
-**Angle:** One sentence describing the framing strategy.
+**Narrative Structure:** State which structure this variant uses (story arc, problem/solution, or comparison).
 
-**Title:** A conference-ready title for this variant.
+**Angle:** One sentence describing the strategic framing.
 
-**Abstract (200-300 words):** A complete, submission-ready abstract. The first sentence must hook the reader with a problem or surprising fact. Never open with "In this talk" or "This session." Avoid buzzwords like "revolutionary," "cutting-edge," "game-changing," "next-generation," and "disruptive."
+**Title:** A conference-ready title. No colons separating a clever phrase from a subtitle unless the subtitle adds real information.
 
-**Best Suited For:** Which conferences or audiences this angle works best for.
+**Abstract (200 to 300 words):** A complete, submission-ready abstract. The first sentence must hook the reader with a concrete problem, a surprising result, or a specific number. Never open with "In this talk" or "This session." Avoid: "revolutionary," "cutting-edge," "game-changing," "next-generation," "disruptive," "unlock," "harness," and "leverage."
 
-**Why This Works:** 1-2 sentences on why this framing is effective.
+**Target Conferences:** Name 2 to 3 specific conferences or track types where this framing fits, with one sentence of reasoning for each.
 
 ---
 
-## Variant Strategy Guide
+## Competitive Differentiation
 
-Use these common framing strategies. Pick three that fit the topic best:
+After generating all three variants, add a section:
 
-1. **The Production Story:** "We ran X in production. Here is what happened." Focuses on real-world results, failures, and lessons. Best for KubeCon, SREcon, and operator-focused events.
+### How These Stand Apart
 
-2. **The How-To:** "Step by step, here is how to build X." Practical, tutorial-style. Best for DevConf, PyCon, and developer-focused events.
+For each variant, answer: "If a program committee has already accepted two talks on this topic, why would they still pick this one?" Identify the specific gap each variant fills. Call out the common framings that other speakers are likely submitting and explain how each variant avoids those well-worn paths.
 
-3. **The Comparison:** "X vs. Y: When to use which." Decision-framework talks that help the audience evaluate options. Best for broad conferences like Open Source Summit.
+## Recommendation
 
-4. **The Problem-First:** "We had problem X. Here is the journey to solving it." Narrative-driven, starting from pain. Strong for any audience.
+End with an actionable recommendation using this structure:
 
-5. **The Future-Looking:** "X is changing. Here is what is coming and how to prepare." Thought-leadership angle. Best for summit-style events and keynote tracks.
+**Strongest overall:** Variant [N], because [specific reason tied to the abstract's hook or structure].
 
-6. **The Beginner's Guide:** "Everything I wish I knew when I started with X." Inclusive, community-building. Best for PyCon, DevConf, and community-driven events.
+**Conference-specific guidance:**
+- For [specific conference name]: submit Variant [N] because [reason tied to that conference's review criteria or audience].
+- For [specific conference name]: submit Variant [N] because [reason].
+- For [specific conference name]: submit Variant [N] because [reason].
 
-7. **The Myth-Buster:** "Everyone says X about Y. Here is what actually happens." Contrarian angle backed by data or experience. Strong attention-getter.
+**Hybrid suggestion:** Describe a fourth possible submission that combines the strongest elements from all three. Identify which title to use, which opening hook, and which structural framework. Keep this to 3 to 4 sentences.
 
-8. **The Architecture Deep-Dive:** "Inside the design of X." Technical depth for practitioners. Best for FOSDEM, KubeCon deep-dive tracks, and specialized events.
+## Style Rules
 
-## After Generating
-
-End with a brief recommendation:
-
-```
-**Recommendation:** Variant [N] is the strongest because [reason]. Consider submitting Variant [N] to [conference type] and Variant [N] to [different conference type].
-```
-
-## Style Guidelines
-
-- Each variant must be genuinely different, not just a rewording of the same abstract.
-- Write in a direct, technical voice.
-- Be specific with examples, tool names, and outcomes.
-- Avoid em dashes. Use commas, periods, or "and" to connect ideas.
-- Make each abstract complete enough to submit as-is.
+- Write in a direct, technical voice. No marketing language, no hype.
+- Be specific: use real tool names, project names, metric types, and concrete outcomes.
+- Never use em dashes. Use commas, periods, semicolons, "and," or colons instead.
+- Each abstract must be complete enough to paste into a submission form and click submit.
+- Vary sentence length and rhythm across variants so they do not read as templates with swapped words.

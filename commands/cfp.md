@@ -1,73 +1,73 @@
 # CFP Generator
 
-Generate a complete conference talk proposal (CFP) from a topic description.
-
-## Instructions
-
-You are a conference talk proposal writer with deep experience in open source and enterprise technology conferences. Given a topic (and optionally a conference name), generate a polished, submission-ready CFP.
+Generate a submission-ready conference talk proposal from a topic description.
 
 **Input:** $ARGUMENTS
+Parse the input for a topic (required) and an optional conference name (e.g., KubeCon, Red Hat Summit, DevConf, PyCon, FOSDEM).
 
-Parse the input for:
-- A topic or subject area (required)
-- A conference name (optional, e.g., KubeCon, Red Hat Summit, DevConf, PyCon, FOSDEM)
+## Thinking Process (follow these steps before writing)
+
+1. **Identify the core insight.** What does this talk offer that no other talk does? Name one sentence that captures it.
+2. **Build the narrative arc.** Structure the proposal as: Problem (what's broken or hard) -> Approach (what you did differently) -> Result (what changed, with evidence) -> Takeaway (what the audience does Monday morning).
+3. **Craft the hook.** Write the first sentence of the abstract to make a reviewer stop scrolling. Use a concrete problem, a surprising statistic, or a provocative question. Not a setup. Not a summary.
+4. **Write learning objectives that pass the "prove it" test.** Each one should describe something the attendee can demonstrate after the talk, not something they "understand."
+5. **Check the bio.** The speaker bio must connect to THIS talk's subject, not list general credentials.
+
+## Anti-Patterns (hard rules)
+
+Do NOT open with "In this talk," "This session," "Join us," or "Come learn." These are dead air.
+Do NOT use: "journey," "deep dive," "landscape," "ecosystem" (as metaphor), "leverage," "at scale" (without numbers), "revolutionary," "cutting-edge," "game-changing," "next-generation," or "innovative."
+Do NOT write learning objectives starting with "Understand," "Learn," "Know," "Appreciate," or "Explore." These are not measurable.
+Do NOT list technologies without explaining the problem they solve. "We used Tekton, ArgoCD, and Knative" means nothing without "to cut deployment time from 4 hours to 12 minutes."
+
+Bad first sentence: "Kubernetes has become the standard for container orchestration."
+Good first sentence: "Your CI pipeline breaks every Friday at 4pm, and nobody knows why."
+
+Bad learning objective: "Understand how service meshes work."
+Good learning objective: "Configure Istio traffic splitting to run canary deployments with less than 1% error budget risk."
 
 ## Output Format
 
-Generate each of the following sections:
-
 ### Title
-Create a compelling, specific title. Avoid clickbait and vague buzzwords. The title should clearly communicate what the attendee will learn. Good titles often follow patterns like "How We Did X with Y" or "Building Z: Lessons from Production."
+Specific, concrete, and clear about what the attendee gains. Patterns that work: "How We Did X with Y," "Building Z: Lessons from Production," or "[Number] Things We Learned Running X at Y Scale."
 
-### Abstract (200-300 words)
-Write a concise abstract that:
-- **The first sentence must hook the reader with a problem or surprising fact.** Do not open with "In this talk" or "This session." Start with a real pain point, a counterintuitive stat, or a question the audience has been wrestling with.
-- Describes what the talk covers and the approach taken
-- Ends with a clear takeaway or value proposition
-- Uses active voice and concrete language
-- Avoids marketing fluff and jargon overload
-- **Never use buzzwords like "revolutionary," "cutting-edge," "game-changing," "next-generation," "disruptive," or "innovative."** Replace them with specific, measurable claims. Instead of "a revolutionary approach," write "an approach that reduced build times by 60%."
+### Abstract
+If a conference is specified, match its typical word count: KubeCon (200-250 words), Red Hat Summit (150-200), DevConf (150-250), PyCon (300-400), FOSDEM (100-200). Otherwise, write 200-300 words.
+The first sentence must be a hook: a real pain point, a counterintuitive fact, or a question practitioners are actually wrestling with. Follow the narrative arc: problem, approach, result, takeaway. Use active voice, concrete language, and real tool/project names. End with what the attendee walks away able to do.
 
-### Detailed Description / Outline
-Provide a structured outline of the talk, broken into sections with approximate time allocations. Include:
-- Introduction and problem statement
-- Key technical content sections (3-4 main points)
-- Demo or case study moments, if applicable
-- Wrap-up and Q&A
+### Detailed Outline
+Structured sections with time allocations for a 30-40 minute talk. Include: problem statement, 3-4 technical sections, demo or case study moments, and wrap-up with Q&A.
 
 ### Learning Objectives
-List 3-4 specific, measurable things attendees will be able to do after the talk. **Each objective must start with an action verb from this list: Deploy, Configure, Evaluate, Build, Implement, Design, Troubleshoot, Compare, Migrate, Debug, Integrate, Automate.** Never use "Understand," "Learn," "Know," or "Appreciate." Avoid vague objectives like "Understand the basics of X."
+3-4 objectives, each starting with a strong action verb: Deploy, Configure, Evaluate, Build, Implement, Design, Troubleshoot, Compare, Migrate, Debug, Integrate, or Automate.
 
 ### Target Audience and Prerequisites
-Specify:
-- Who this talk is for (roles, experience levels)
-- What attendees should already know before attending
-- What attendees do NOT need to know (lowering the barrier)
+Who this talk is for (roles, experience level), what they should already know, and what they do NOT need to know.
 
-### Session Type Recommendation
-Recommend one of: **Talk (30-40 min)**, **Workshop (90-120 min)**, or **Lightning Talk (5-10 min)**. Briefly explain why this format fits the content.
+### Session Format
+Recommend Talk (30-40 min), Workshop (90-120 min), or Lightning Talk (5-10 min) with a one-sentence justification.
 
 ### Speaker Bio Template
-Generate a 2-3 sentence bio template with placeholders for the speaker to fill in. Focus on relevant experience and credibility for this topic.
+2-3 sentences with placeholders. Connect the bio to this talk's subject matter, not generic credentials.
 
 ## Conference Tailoring
+- **KubeCon/CloudNativeCon:** Cloud native, Kubernetes, CNCF projects, production war stories. Use CNCF CFP structure.
+- **Red Hat Summit:** Enterprise open source, hybrid cloud, automation. Highlight customer or partner outcomes with metrics.
+- **DevConf:** Upstream contributions, developer tooling, hands-on content. Community-oriented and practical.
+- **PyCon:** Python-specific tooling, libraries, community practices. Beginner-friendly framing where appropriate. Longer abstracts (300-400 words).
+- **FOSDEM:** Deeply technical, upstream-focused, substance over polish. Short abstracts (100-200 words).
+- **AnsibleFest:** Automation, playbooks, collections, real-world operations. Show the before and after.
+- **Open Source Summit:** Cross-project collaboration and ecosystem impact for a broad open source audience.
 
-If a conference is specified, adjust the proposal:
+## Self-Critique Checklist (verify before outputting)
+- [ ] First sentence is a hook, not a setup or summary
+- [ ] No banned buzzwords or filler phrases appear anywhere
+- [ ] Every learning objective uses a strong action verb and is measurable
+- [ ] Abstract follows the narrative arc: problem, approach, result, takeaway
+- [ ] Abstract tells a story, not a feature list
+- [ ] Title is specific enough that a reviewer knows exactly what the talk covers
+- [ ] Speaker bio connects to this talk's topic
+- [ ] No em dashes anywhere. Use commas, periods, colons, or "and" instead.
 
-- **KubeCon / CloudNativeCon:** Emphasize cloud native, Kubernetes, CNCF projects, and production experience. Use the CNCF CFP structure if known.
-- **Red Hat Summit:** Focus on enterprise open source, hybrid cloud, automation, and Red Hat product ecosystem. Highlight customer or partner impact.
-- **DevConf.cz / DevConf.us:** Lean toward upstream community contributions, developer tooling, and hands-on content. Keep it practical and community-oriented.
-- **PyCon:** Emphasize Python-specific tooling, libraries, and community practices. Include beginner-friendly framing where appropriate.
-- **FOSDEM:** Keep it deeply technical, upstream-focused, and community-driven. FOSDEM values substance over polish.
-- **AnsibleFest / Ansible community events:** Center on automation, playbooks, collections, and real-world operations use cases.
-- **Open Source Summit:** Broad open source audience. Emphasize cross-project collaboration and ecosystem impact.
-
-If no conference is specified, write a general-purpose proposal suitable for most mid-to-large technology conferences.
-
-## Style Guidelines
-
-- Write in a direct, technical voice. No hype.
-- Be specific. Use real tool names, project names, and concrete examples.
-- Keep sentences short and active.
-- Avoid em dashes. Use commas, periods, or "and" to connect ideas.
-- Show, do not tell. Instead of "This talk will be valuable," describe what the attendee walks away with.
+## Voice
+Direct, technical, specific. No hype. Short sentences, active voice. Show what the attendee gains. Never tell them it will be "valuable."
