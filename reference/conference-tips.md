@@ -14,18 +14,59 @@ A quick reference for what major conferences look for, common pitfalls, and prac
 
 5. **Relevance to the conference.** Tailor your submission. A deeply Kubernetes-specific talk does not belong at PyCon. A beginner Python tutorial does not belong at FOSDEM's kernel track.
 
+## What Reviewers Actually Look For
+
+Based on publicly available reviewer guidelines from major conferences:
+
+### KubeCon / CloudNativeCon (CNCF)
+The CNCF publishes reviewer guidelines emphasizing:
+- **Relevance to cloud native ecosystem.** Proposals must connect to CNCF projects, cloud native patterns, or the Kubernetes ecosystem specifically. Generic infrastructure talks that do not mention the cloud native stack score lower.
+- **End-user perspective.** CNCF actively prioritizes real-world production stories over vendor-driven content. Proposals from end users or featuring end-user co-presenters score higher.
+- **Novelty over repetition.** Reviewers check past KubeCon schedules. If the same topic was covered last cycle, your version must bring new data, a new angle, or updated results.
+- **Blind review.** CNCF uses blind review for most tracks. Your abstract must stand on its own without relying on your name or employer to carry it.
+- **Scoring rubric:** Technical merit, relevance to the track, clarity of the abstract, and novelty. Each dimension is scored independently.
+
+### FOSDEM
+FOSDEM devroom organizers have shared these priorities:
+- **Technical depth.** FOSDEM audiences are practitioners who build the software. Surface-level overviews get rejected. Show code, architecture, or protocol-level detail.
+- **Upstream focus.** FOSDEM prioritizes free and open source software contributions. Talks about proprietary products or vendor platforms are consistently rejected.
+- **Devroom fit.** Each devroom has its own review committee and scope. A great talk submitted to the wrong devroom gets rejected. Read the devroom description carefully.
+- **Practical value.** Reviewers prefer talks where the audience learns a technique, discovers a tool, or gains insight they can use immediately.
+
+### PyCon US
+PyCon publishes detailed reviewer guidelines:
+- **Accessibility.** Proposals should be understandable to a broad Python audience. Reviewers penalize unnecessary jargon and assumed knowledge that is not listed in prerequisites.
+- **Diversity of topics.** PyCon actively seeks talks that are not just web frameworks and data science. Unique topics or underrepresented areas of Python score well.
+- **Speaker experience is secondary.** PyCon explicitly tells reviewers not to weigh speaker experience heavily. A first-time speaker with a clear, well-scoped proposal beats a veteran with a vague one.
+- **Outline quality.** PyCon reviewers read your outline carefully. A strong outline with clear progression signals a well-prepared talk.
+
+### General Patterns Across Conferences
+Regardless of the specific event, reviewers consistently prioritize:
+1. **Would I attend this talk?** The most common question reviewers ask themselves. Write your abstract so the answer is yes.
+2. **Is the scope realistic?** Reviewers reject ambitious proposals that try to cover too much. A focused, achievable scope beats an impressive-sounding but unrealistic one.
+3. **Does it teach something actionable?** Talks that end with "and now you know about X" lose to talks that end with "and now you can do X."
+4. **Is it a vendor pitch in disguise?** Reviewers across all conferences flag proposals that read like product demos. Even if you work for a vendor, frame the talk around the problem and the open source solution, not the product.
+
 ## Common Word Limits
 
-| Conference | Abstract | Description |
-|---|---|---|
-| KubeCon / CloudNativeCon | 200-300 words | 900 words max |
-| Red Hat Summit | 200 words | 500 words |
-| DevConf.cz | 200 words | No strict limit |
-| PyCon US | 300 words | 400 words (outline) |
-| FOSDEM | 200 words | Varies by devroom |
-| Open Source Summit | 200 words | 600 words |
-| AnsibleFest | 200 words | 500 words |
-| All Things Open | 200 words | No strict limit |
+| Conference | Abstract | Description | Session Types |
+|---|---|---|---|
+| KubeCon / CloudNativeCon | 200-300 words | 900 words max | Talk (35 min), Tutorial (90 min), Lightning Talk (5 min) |
+| Red Hat Summit | 200 words | 500 words | Breakout (40 min), Lab (90 min), Lightning Talk (10 min) |
+| DevConf.cz | 200 words | No strict limit | Talk (35 min), Workshop (60-90 min), Lightning Talk (15 min) |
+| PyCon US | 300 words | 400 words (outline) | Talk (30 min), Tutorial (3 hours), Poster, Lightning Talk (5 min) |
+| FOSDEM | 200 words | Varies by devroom | Talk (20-50 min varies by devroom), Lightning Talk (15 min) |
+| Open Source Summit | 200 words | 600 words | Session (30 min), Tutorial (90 min), BoF (60 min), Lightning Talk (5-10 min) |
+| AnsibleFest | 200 words | 500 words | Breakout (40 min), Workshop (90 min), Lightning Talk (10 min) |
+| All Things Open | 200 words | No strict limit | Talk (30-45 min), Workshop (90 min), Lightning Talk (10 min) |
+| SREcon | 250 words | 600 words | Talk (25 min), Training (half-day or full-day) |
+| SCALE (Southern California Linux Expo) | 200 words | 500 words | Talk (45 min), Tutorial (90 min), Lightning Talk (5 min) |
+| GopherCon | 250 words | 500 words | Talk (25 or 45 min), Tutorial (3 hours), Lightning Talk (7 min) |
+| RustConf | 200 words | 400 words | Talk (30 min) |
+| GitHub Universe | 200 words | 500 words | Session (30 min), Workshop (90 min) |
+| QCon | 300 words | 600 words | Talk (50 min), Workshop (half-day) |
+| Strange Loop | 300 words | No strict limit | Talk (40 min) |
+| NDC | 200 words | 500 words | Talk (60 min), Lightning Talk (10 min), Workshop (full-day) |
 
 Note: Always check the current CFP form for the conference you are submitting to. Limits change year to year.
 

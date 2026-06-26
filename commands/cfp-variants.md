@@ -20,7 +20,7 @@ For each of the three variants, generate:
 
 **Title:** A conference-ready title for this variant.
 
-**Abstract (200-300 words):** A complete, submission-ready abstract.
+**Abstract (200-300 words):** A complete, submission-ready abstract. The first sentence must hook the reader with a problem or surprising fact. Never open with "In this talk" or "This session." Avoid buzzwords like "revolutionary," "cutting-edge," "game-changing," "next-generation," and "disruptive."
 
 **Best Suited For:** Which conferences or audiences this angle works best for.
 

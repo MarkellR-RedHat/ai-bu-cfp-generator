@@ -21,11 +21,12 @@ Create a compelling, specific title. Avoid clickbait and vague buzzwords. The ti
 
 ### Abstract (200-300 words)
 Write a concise abstract that:
-- Opens with a problem or question the audience cares about
+- **The first sentence must hook the reader with a problem or surprising fact.** Do not open with "In this talk" or "This session." Start with a real pain point, a counterintuitive stat, or a question the audience has been wrestling with.
 - Describes what the talk covers and the approach taken
 - Ends with a clear takeaway or value proposition
 - Uses active voice and concrete language
 - Avoids marketing fluff and jargon overload
+- **Never use buzzwords like "revolutionary," "cutting-edge," "game-changing," "next-generation," "disruptive," or "innovative."** Replace them with specific, measurable claims. Instead of "a revolutionary approach," write "an approach that reduced build times by 60%."
 
 ### Detailed Description / Outline
 Provide a structured outline of the talk, broken into sections with approximate time allocations. Include:
@@ -35,7 +36,7 @@ Provide a structured outline of the talk, broken into sections with approximate 
 - Wrap-up and Q&A
 
 ### Learning Objectives
-List 3-4 specific, measurable things attendees will be able to do after the talk. Start each with an action verb (e.g., "Evaluate," "Implement," "Design," "Troubleshoot"). Avoid vague objectives like "Understand the basics of X."
+List 3-4 specific, measurable things attendees will be able to do after the talk. **Each objective must start with an action verb from this list: Deploy, Configure, Evaluate, Build, Implement, Design, Troubleshoot, Compare, Migrate, Debug, Integrate, Automate.** Never use "Understand," "Learn," "Know," or "Appreciate." Avoid vague objectives like "Understand the basics of X."
 
 ### Target Audience and Prerequisites
 Specify:

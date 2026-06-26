@@ -21,15 +21,16 @@ Evaluate the submission on each of the following dimensions. For each, give a ra
 - Is it free of clickbait, vague buzzwords, and unnecessary jargon?
 
 ### 2. Abstract
-- Does it open with a problem or question the audience cares about?
+- **Does the first sentence hook the reader with a problem or surprising fact?** Flag any abstract that opens with "In this talk" or "This session will cover."
 - Is the scope clear and appropriately sized for the session length?
 - Does it promise a concrete takeaway?
 - Is it within typical word limits (200-300 words for most conferences)?
 - Is the writing crisp, active, and free of filler?
+- **Does it avoid buzzwords like "revolutionary," "cutting-edge," "game-changing," "next-generation," or "disruptive"?** Flag any that appear and suggest concrete replacements.
 
 ### 3. Learning Objectives
 - Are there 3-4 specific, measurable objectives?
-- Do they start with action verbs?
+- **Do they start with strong action verbs (Deploy, Configure, Evaluate, Build, Implement, Design, Troubleshoot, Compare)?** Flag any that use "Understand," "Learn," "Know," or "Appreciate."
 - Would an attendee know exactly what they will walk away with?
 - Are they realistic for the session length?
 
