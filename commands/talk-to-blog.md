@@ -126,4 +126,6 @@ The blog title works in search results. Each section adds depth the talk could n
 
 ## Next Steps
 
-After generating your blog outline, run `/cfp-from-blog` if you want to convert the finished blog post into a proposal for a different conference.
+After generating your blog outline:
+- Run `/style-checker` on your finished draft to catch voice inconsistencies and filler before publishing.
+- Run `/cfp-from-blog` if you want to convert the finished blog post into a proposal for a different conference.

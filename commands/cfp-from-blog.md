@@ -102,4 +102,6 @@ The title promises a specific result and a live demo. The abstract tells a story
 
 ## Next Steps
 
-After generating your proposal, run `/cfp-review` to get scored feedback and concrete rewrites before submitting.
+After generating your proposal:
+- Run `/cfp-review` to get scored feedback and concrete rewrites before submitting.
+- Run `/slide-outliner` to build the talk deck once your proposal is accepted.

@@ -105,4 +105,6 @@ Abstract A is the reliable hand: clear value, specific numbers, reviewers know w
 
 ## Next Steps
 
-After generating your A/B abstracts, run `/cfp-review` on the version you plan to submit for scored feedback and concrete rewrites before the deadline.
+After generating your A/B abstracts:
+- Run `/cfp-review` on the version you plan to submit for scored feedback and concrete rewrites before the deadline.
+- Run `/slide-outliner` to start building the deck once your chosen abstract is accepted.

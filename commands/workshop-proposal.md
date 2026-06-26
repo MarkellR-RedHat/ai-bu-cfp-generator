@@ -118,4 +118,6 @@ Specific artifact (Helm chart). Concrete verification (load test with traffic ta
 
 ## Next Steps
 
-After generating your workshop proposal, run `/cfp-review` to get scored feedback and concrete rewrites before submitting.
+After generating your workshop proposal:
+- Run `/cfp-review` to get scored feedback and concrete rewrites before submitting.
+- Run `/slide-outliner` to build the instructor slide deck once the proposal is accepted.
