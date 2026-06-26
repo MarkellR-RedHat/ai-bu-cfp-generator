@@ -85,3 +85,17 @@ One sentence. Match the format's brevity. A multi-paragraph bio next to a five-m
 
 ## Style
 Direct, specific, no filler. Short active sentences. No em dashes anywhere. Use commas, periods, colons, semicolons, or "and" instead. Every word in the proposal should justify its presence. If it does not serve the one takeaway, cut it.
+
+## Calibration: Bad vs. Good Lightning Talk Output
+
+**Bad lightning talk proposal:**
+Title: "An Overview of Useful kubectl Plugins"
+Abstract: "In this lightning talk, I will provide an overview of several kubectl plugins that can improve your Kubernetes workflow. We will discuss plugins for resource management, debugging, and cluster administration. Attendees will learn about the plugin ecosystem and understand how to find and install plugins that match their needs."
+
+This is a 30-minute talk crammed into 5 minutes. Three topics, no hook, passive learning objectives. The reviewer pictures someone speed-reading 15 slides.
+
+**Good lightning talk proposal:**
+Title: "Stop Writing kubectl get -o jsonpath"
+Abstract: "You wrote `kubectl get pods -o jsonpath='{.items[*].metadata.name}'` again today. So did I. One plugin replaces every jsonpath query you have ever written with a single interactive command. Live demo: I will install it, query a 200-pod cluster, and filter to the five pods that are about to OOMKill, all in under 90 seconds."
+
+One idea. One tool. One demo. The reviewer can picture exactly what happens on stage and why it is worth five minutes of a packed schedule.

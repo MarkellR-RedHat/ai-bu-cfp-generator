@@ -97,3 +97,19 @@ Before outputting, verify:
 - Be specific. Use real tool names, project names, and concrete examples from the proposal. Specificity is what makes a blog post useful. Generality is what makes it forgettable.
 - Keep sentences short and active. No em dashes anywhere. Use commas, periods, colons, semicolons, or "and" instead.
 - The outline must stand alone with zero dependency on attending the talk. Test this by imagining a reader who found the post through a search engine and has never heard of the conference. Would they find it complete?
+
+## Calibration: Bad vs. Good Talk-to-Blog Conversion
+
+**Bad conversion (talk transcript with headings):**
+Blog title: "My KubeCon Talk on GPU Scheduling"
+Section 1: "As I mentioned in my talk, GPU scheduling is an important topic..."
+Section 2: "In this next section of my presentation, I covered..."
+
+This is not a blog post. It is a transcript wearing a costume. A reader who missed the talk learns nothing. A reader who saw the talk learns nothing new.
+
+**Good conversion (rebuilt for readers):**
+Blog title: "GPU Scheduling on Kubernetes: The Architecture That Cut Our Idle Time from 65% to 28%"
+Section 1: "The default Kubernetes scheduler does not understand GPU topology. Here is what that costs you." (Includes a config snippet the talk's slides could not fit.)
+Section 2: "Three scheduling plugins we built, with the exact CRD definitions and benchmark results the talk only had time to summarize."
+
+The blog title works in search results. Each section adds depth the talk could not cover in 35 minutes. No references to "my talk" or "the presentation." A reader who finds this through Google six months later finds it complete and useful.

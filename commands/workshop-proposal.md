@@ -93,3 +93,15 @@ If a conference is specified: **KubeCon** uses CNCF structure and cloud lab envi
 
 ## Style
 Direct, technical, no hype. Specific tools, versions, and commands. Short active sentences. No em dashes anywhere. Use commas, periods, colons, semicolons, or "and" instead. Realistic time estimates: when in doubt, add more time. A workshop that respects people's time earns their trust.
+
+## Calibration: Bad vs. Good Workshop Output
+
+**Bad workshop abstract:**
+"In this hands-on workshop, attendees will learn about deploying machine learning models on Kubernetes. We will cover the basics of containerization, Kubernetes concepts, and model serving. By the end, participants will have a better understanding of the ML deployment landscape."
+
+No artifact. No checkpoints. "Better understanding" is not something you build. This is a lecture pretending to be a workshop.
+
+**Good workshop abstract:**
+"Your model works in a notebook. Your team needs it serving 500 requests per second by Friday. In this 90-minute workshop, you will take a trained PyTorch model from a local checkpoint to a production-grade vLLM deployment on Kubernetes, with autoscaling, health checks, and a load test proving it handles the traffic. Every attendee leaves with a working Helm chart they can point at their own cluster and deploy."
+
+Specific artifact (Helm chart). Concrete verification (load test with traffic target). Honest about what you build. A reviewer reads this and trusts that 40 people will not sit idle.

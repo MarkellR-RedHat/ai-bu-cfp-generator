@@ -73,3 +73,19 @@ A 2 to 3 sentence bio template with placeholders. Focus on relevant experience f
 - Never use em dashes. Use commas, periods, colons, semicolons, or "and" to connect ideas.
 - The abstract must stand alone with zero references to the source blog post.
 - Remember: you are not summarizing an article. You are building a performance.
+
+## Calibration: Bad vs. Good Blog-to-Talk Conversion
+
+**Bad conversion (compressed blog, not a rebuilt talk):**
+Blog title: "How We Reduced Inference Latency with vLLM"
+Talk title: "How We Reduced Inference Latency with vLLM"
+Abstract opens with: "In this talk, I will present the key findings from our blog post about reducing inference latency using vLLM. We will cover the architecture, the benchmarks, and the lessons learned."
+
+This is a blog summary, not a talk. The title is unchanged. The abstract references the blog. There are no live moments. A reviewer sees this and pictures someone reading slides that paraphrase their own article.
+
+**Good conversion (rebuilt for a room):**
+Blog title: "How We Reduced Inference Latency with vLLM"
+Talk title: "From 800ms to 200ms: Rebuilding Our Inference Stack Live on Stage"
+Abstract opens with: "Our users were leaving before the model finished thinking. 800ms p99 latency on a serving layer we had spent six months building. We ripped it out and rebuilt it with vLLM in a single sprint. This talk includes a live demo comparing both architectures on the same prompt, so you can see the difference in real time."
+
+The title promises a specific result and a live demo. The abstract tells a story with tension. The live moment (side-by-side comparison on stage) gives people a reason to attend instead of reading the blog post.

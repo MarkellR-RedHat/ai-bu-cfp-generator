@@ -190,7 +190,7 @@ ai-bu-cfp-generator/
     pycon-open-source-community.md
     kubecon-tutorial-service-mesh.md
   reference/
-    conference-tips.md      # Comprehensive conference submission guide
+    conference-tips.md      # Conference submission guide with tactical tips
   install.sh               # Installer script
   README.md                # This file
 ```

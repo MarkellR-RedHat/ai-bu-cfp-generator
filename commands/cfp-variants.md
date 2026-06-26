@@ -83,3 +83,19 @@ End with an actionable recommendation using this structure:
 - Each abstract must be complete enough to paste into a submission form and click submit.
 - Vary sentence length and rhythm across variants so they do not read as templates with swapped words.
 - Write as a strategic coach, not a content mill. Every sentence should feel like it was chosen, not generated.
+
+## Calibration: Bad vs. Good Variant Differentiation
+
+**Bad variants (same idea, different words):**
+- Variant 1: "Scaling GPU Scheduling for Modern Workloads" -- opens with "GPU utilization is a growing challenge..."
+- Variant 2: "Efficient GPU Management in Kubernetes" -- opens with "Managing GPU resources effectively..."
+- Variant 3: "Optimizing GPU Allocation for ML Training" -- opens with "Machine learning teams need better GPU access..."
+
+These are the same talk with different titles. A reviewer who reads all three learns nothing new from the second or third.
+
+**Good variants (genuinely different angles, different reviewers want each one):**
+- Variant 1 (Story arc): "How We Stopped Wasting $1.2M in GPU Capacity" -- opens with "Our ML teams waited four hours for GPUs while utilization sat at 35%. Six months later, it was 72%. This is the architecture that got us there."
+- Variant 2 (Problem/solution): "Three Scheduling Plugins That Cut GPU Idle Time in Half" -- opens with "Default Kubernetes scheduling ignores GPU topology. That single fact costs most clusters 40-60% of their accelerator budget. Here are the three plugins we wrote to fix it, with configs you can deploy this week."
+- Variant 3 (Comparison): "GPU Scheduling: Bin-Packing vs. Topology-Aware vs. Time-Slicing in Production" -- opens with "We benchmarked three GPU scheduling strategies on the same 48-node cluster over 90 days. The winner was not the one we expected."
+
+Each of these wins with a different reviewer. The first wins the practitioner who values war stories. The second wins the implementer who wants something to deploy Monday. The third wins the architect comparing strategies.

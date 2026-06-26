@@ -79,3 +79,16 @@ Think like a poker player evaluating two hands. One abstract might be the safe p
 - [ ] No banned buzzwords, filler phrases, or em dashes appear anywhere in the output
 - [ ] Every learning objective uses a strong action verb and describes a measurable skill
 - [ ] Both first sentences are hooks, not setups or summaries
+
+## Calibration: Bad vs. Good A/B Output
+
+**Bad A/B test (two versions of the same abstract):**
+Abstract A opens with: "Deploying ML models at scale requires careful architecture decisions."
+Abstract B opens with: "Scaling ML inference presents unique infrastructure challenges."
+These are the same sentence wearing different clothes. A reviewer would not remember either one.
+
+**Good A/B test (genuinely different bets):**
+Abstract A (safe, evidence-led) opens with: "We serve 200 models on hardware that was struggling with 40. Three architectural changes made the difference, and none of them required new GPUs."
+Abstract B (bold, contrarian) opens with: "Most GPU scheduling talks tell you to buy smarter hardware. We did the opposite: we stopped trusting the scheduler and built a routing layer that treats models like cattle, not pets. Our inference costs dropped 73%."
+
+Abstract A is the reliable hand: clear value, specific numbers, reviewers know what they are getting. Abstract B is the swing: it challenges conventional wisdom, and a reviewer who values originality will champion it in committee. A reviewer who wants safe picks will score it lower. The speaker should submit A to conferences where the committee is conservative (Red Hat Summit, enterprise tracks) and B to conferences that reward provocation (FOSDEM, SREcon, KubeCon experience reports).

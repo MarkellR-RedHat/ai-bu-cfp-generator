@@ -1,6 +1,6 @@
 # Conference CFP Tips and Reference
 
-A comprehensive reference for conference Call for Proposals (CFP) submissions. Covers what reviewers look for, common mistakes, templates, and a detailed directory of major conferences with tactical advice for each.
+Reference for conference Call for Proposals (CFP) submissions. What reviewers look for, common mistakes, templates, and tactical advice for 27+ conferences.
 
 ---
 
@@ -32,7 +32,7 @@ Word limits, session formats, review processes, timelines, and tactical tips for
 
 - **Abstract:** 200 words. **Description:** No strict limit.
 - **Session types:** Talk (35 min, 25 min talk + 10 min Q&A), Lightning Talk (15 min), Workshop (80 min).
-- **Review process:** CfP committee reviews holistically across tracks. Regional priority for Europe, Middle East, and Africa speakers. Limit of 3 submissions per person (including co-speaker credits). AI-generated submissions are rejected.
+- **Review process:** CfP committee reviews across all tracks together. Regional priority for Europe, Middle East, and Africa speakers. Limit of 3 submissions per person (including co-speaker credits). AI-generated submissions are rejected.
 - **What reviewers prioritize:** Technical depth (not overviews), new or planned work, emerging topics 1-2 years out, audience interaction and demos. Product pitches score poorly.
 - **Acceptance rate:** Approximately 25% for talks. Limit of one 35-minute talk per speaker.
 - **CFP timeline:** Opens mid-December, closes early March for a June conference.
@@ -183,7 +183,7 @@ Word limits, session formats, review processes, timelines, and tactical tips for
 - **Abstract:** 200 words. **Description:** 500 words.
 - **Session types:** Session (30 min), Workshop (90 min).
 - **Review process:** Selection by Docker program team.
-- **What reviewers prioritize:** Content that helps developers apply lessons immediately. Sessions should be the beginning of a learning journey, not a comprehensive overview. Supplementary materials (repos, demos) strengthen submissions.
+- **What reviewers prioritize:** Content developers can apply the same week. Sessions should start the attendee on a path to building something, not summarize a topic at surface level. Supplementary materials (repos, demos) strengthen submissions.
 - **Acceptance rate:** Not publicly disclosed.
 - **CFP timeline:** Typically closes late February to late March.
 - **Tactical tip:** DockerCon values sessions that include supporting assets: a GitHub repo, a working demo, or supplementary docs. Including these in your submission signals preparation and gives reviewers confidence in your talk.
