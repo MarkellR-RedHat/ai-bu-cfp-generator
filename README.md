@@ -1,10 +1,65 @@
-# ai-bu-cfp-generator
+# CFP Generator
 
-You have a great talk idea. You know the content cold. But you're staring at a 300-word abstract box and the deadline is in 48 hours.
+## You have a great talk idea. The deadline is tomorrow.
 
-The problem isn't that you don't know what to say. The problem is that you don't know how to pitch it to a review committee you've never met, who will read your abstract alongside 200 others in a single weekend. You have one sentence to make them care.
+You know the content cold. You've built the thing, debugged it in production, and have opinions worth sharing. But you're staring at a 300-word abstract box, and the review committee will read yours alongside 200 others in a single weekend.
+
+The problem isn't what to say. It's how to pitch it to reviewers you've never met who need a reason to care in the first sentence.
 
 These nine Claude Code slash commands are your conference speaking coach. They encode what actually gets abstracts accepted, based on published reviewer guidelines from KubeCon, PyCon, FOSDEM, Red Hat Summit, SREcon, and 20+ other conferences.
+
+## Before and After
+
+**What you typed:**
+
+```
+/cfp building GPU-aware scheduling for Kubernetes AI workloads, KubeCon
+```
+
+**What you started with:**
+
+> I built a GPU scheduling layer for Kubernetes. It uses custom resource
+> definitions and topology-aware plugins. We reduced waste by about half
+> on our cluster.
+
+**What the tool produced:**
+
+> **Scheduling GPUs Without Wasting Them: Lessons from Running 200 AI Training Jobs on Kubernetes**
+>
+> Most Kubernetes clusters waste 40-60% of their GPU capacity. Pods request
+> full GPUs they only partially use, scheduling decisions ignore topology,
+> and teams queue for hours while expensive accelerators sit idle. We hit
+> this wall running ML training on a 48-GPU cluster and spent six months
+> building a scheduling layer that cut our GPU waste by half.
+>
+> You will see how we implemented fractional GPU sharing for inference
+> workloads while reserving whole GPUs for training jobs. We will also cover
+> the failures: our first attempt at bin-packing GPUs caused memory
+> contention that crashed training runs.
+
+Three sentences became a submission-ready abstract with a hook, production specifics, and a failure story that reviewers love.
+
+## Quick Start
+
+```bash
+git clone https://github.com/MarkellR-RedHat/ai-bu-cfp-generator.git
+cd ai-bu-cfp-generator
+./install.sh
+```
+
+That's it. The installer copies nine slash command files to `~/.claude/commands/` and they're available immediately in Claude Code.
+
+**Try your first command:**
+
+```bash
+/cfp [your topic], [target conference]
+```
+
+Example:
+
+```bash
+/cfp building GPU-aware scheduling for Kubernetes, KubeCon
+```
 
 ## Commands
 
@@ -12,10 +67,10 @@ These nine Claude Code slash commands are your conference speaking coach. They e
 
 | Command | What it does |
 |---------|-------------|
-| `/cfp` | Turn a rough topic into a submission-ready CFP. Starts from your messy idea and finds the story. |
-| `/cfp-variants` | Generate 3 genuinely different framings for the same topic. Different hooks, different structures, different reviewers they appeal to. |
+| `/cfp` | Turn a rough topic into a submission-ready abstract. Starts from your messy idea and finds the story. |
+| `/cfp-variants` | Generate 3 genuinely different framings for the same topic. Different hooks, structures, and reviewer appeal. |
 | `/cfp-ab-test` | Generate 2 competing abstracts, then analyze which wins for which conference and why. |
-| `/cfp-from-blog` | Convert a blog post into a talk proposal. Not a compression. A rebuild for live delivery. |
+| `/cfp-from-blog` | Rebuild a blog post as a talk proposal. Not compression, a restructure for live delivery. |
 | `/workshop-proposal` | Generate a hands-on workshop with checkpoints, failure mode planning, and a take-home artifact. |
 | `/lightning-talk` | Generate a 5-minute lightning talk. One idea, one takeaway, zero filler. |
 
@@ -24,7 +79,7 @@ These nine Claude Code slash commands are your conference speaking coach. They e
 | Command | What it does |
 |---------|-------------|
 | `/cfp-review` | Scored review with concrete rewrites for every weak section. Simulates a tired reviewer who has already read 80 abstracts today. |
-| `/cfp-reviewer` | Simulate a 3-person review committee. Three reviewers with different priorities score your submission independently, then a meta-review tells you exactly what to fix. |
+| `/cfp-reviewer` | Simulate a 3-person review committee. Independent scores, then a meta-review telling you exactly what to fix. |
 
 ### Repurpose
 
@@ -32,26 +87,9 @@ These nine Claude Code slash commands are your conference speaking coach. They e
 |---------|-------------|
 | `/talk-to-blog` | Convert an accepted talk into a companion blog post outline with SEO guidance and social hooks. |
 
-## Install
+## What the Review Committee Sounds Like
 
-```bash
-git clone https://github.com/MarkellR-RedHat/ai-bu-cfp-generator.git
-cd ai-bu-cfp-generator
-chmod +x install.sh
-./install.sh
-```
-
-This copies all command files to `~/.claude/commands/` so they're available as slash commands in Claude Code.
-
-Or copy manually:
-
-```bash
-cp commands/*.md ~/.claude/commands/
-```
-
-## What the Review Committee Actually Sounds Like
-
-The `/cfp-reviewer` command is the one that changes how you write proposals. Here is a real example.
+The `/cfp-reviewer` command changes how you write proposals. Here is a real example.
 
 **You paste this rough abstract:**
 
@@ -65,54 +103,27 @@ architecture: custom resource definitions, topology-aware scheduling plugins,
 and real-time utilization metrics from DCGM.
 ```
 
-**The review committee catches what you missed:**
+**Three reviewers catch what you missed:**
 
-```
-### Reviewer A: The Practitioner
+> **Reviewer A (The Practitioner):** "The production details are strong.
+> '48-GPU cluster' and 'six months' tell me this person actually built
+> something. But there are zero learning objectives. I can't tell what
+> I'll be able to DO after this talk."
 
-| Dimension                    | Score |
-|------------------------------|-------|
-| Clarity                      | 4     |
-| Relevance                    | 5     |
-| Novelty                      | 4     |
-| Speaker qualification signals| 4     |
-| Learning objectives quality  | 2     |
+> **Reviewer B (The Program Chair):** "GPU scheduling talks are common at
+> KubeCon. I've seen five this cycle already. The bin-packing failure
+> story is the differentiator, but it's buried in the last sentence.
+> Lead with it."
 
-"The production details are strong. '48-GPU cluster' and 'six months'
-tell me this person actually built something. But there are zero learning
-objectives. I can't tell what I'll be able to DO after this talk. Add 3
-objectives starting with action verbs: Deploy, Configure, Evaluate."
-```
+> **Reviewer C (The Skeptic):** "'Cut waste by half' is vague. Half of
+> what? Give me '35% average GPU utilization to 72%' and this abstract
+> jumps from a 3 to a 4."
 
-```
-### Reviewer B: The Program Chair
+> **Meta-Review:** The ONE change that would most improve the score: add
+> specific before/after utilization numbers and 3 learning objectives
+> with strong action verbs.
 
-"I need to fill 40 slots from 200 submissions. GPU scheduling talks are
-common at KubeCon. I've seen five this cycle already. What's new here?
-The bin-packing failure story is the differentiator, but it's buried in
-the last sentence. Lead with it."
-```
-
-```
-### Reviewer C: The Skeptic
-
-"'Cut waste by half' is vague. Half of what? What was baseline utilization,
-and what is it now? Give me '35% average GPU utilization to 72%' and this
-abstract jumps from a 3 to a 4."
-```
-
-```
-## Meta-Review
-
-Biggest risk of rejection: Missing learning objectives and insufficient
-differentiation from existing GPU scheduling talks.
-
-The ONE change that would most improve the score: Add specific
-before/after utilization numbers and 3 learning objectives with
-strong action verbs.
-```
-
-Three reviewers. Independent scores. Feedback that quotes your text and tells you exactly what to fix. That is the difference between "your abstract needs work" and knowing the one change that moves it from "revise and resubmit" to "accept."
+That is the difference between "your abstract needs work" and knowing the one change that moves it from "revise and resubmit" to "accept."
 
 ## Usage Examples
 
@@ -163,36 +174,17 @@ The `examples/` directory contains full outputs showing different styles and con
 The `reference/conference-tips.md` file covers:
 
 - 25+ conferences with word limits, session types, review processes, and tactical tips
-- What reviewers actually prioritize (based on published guidelines from KubeCon, PyCon, FOSDEM, SREcon, and others)
+- What reviewers actually prioritize (based on published guidelines)
 - The 14 most common rejection reasons and how to avoid each one
 - Fill-in-the-blank templates for talks, lightning talks, workshops, and panels
 - A pre-submission checklist organized by phase
 
-## Project Structure
+## Manual Install
 
-```
-ai-bu-cfp-generator/
-  commands/
-    cfp.md                  # Main CFP generator
-    cfp-review.md           # Scored review with rewrite suggestions
-    cfp-reviewer.md         # 3-person review committee simulation
-    cfp-variants.md         # 3 different angles for one topic
-    cfp-ab-test.md          # 2 competing abstracts with analysis
-    cfp-from-blog.md        # Blog post to talk proposal
-    workshop-proposal.md    # Hands-on workshop generator
-    lightning-talk.md       # 5-minute lightning talk generator
-    talk-to-blog.md         # Talk proposal to blog post outline
-  examples/
-    kubecon-gpu-scheduling.md
-    summit-ansible-compliance.md
-    lightning-talk-kubectl-plugins.md
-    fosdem-ebpf-observability.md
-    pycon-open-source-community.md
-    kubecon-tutorial-service-mesh.md
-  reference/
-    conference-tips.md      # Conference submission guide with tactical tips
-  install.sh               # Installer script
-  README.md                # This file
+If you prefer not to use the installer:
+
+```bash
+cp commands/*.md ~/.claude/commands/
 ```
 
 ## Contributing
