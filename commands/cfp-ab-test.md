@@ -8,6 +8,16 @@ $ARGUMENTS
 
 Parse the input for a talk topic, technical area, or project name. If the input includes speaker experience, production results, or audience context, use those details to ground both abstracts in specifics rather than generalities.
 
+## Handling Edge Cases (check before proceeding)
+
+**Vague topic with no clear angle.** If the input is broad ("something about Kubernetes" or "AI stuff"), do NOT generate two vague abstracts. Instead, ask 3 to 4 sharpening questions: What specific problem have you solved? What surprised you? What do you know that most people in the room do not? Two abstracts built on a vague foundation are just two flavors of generic. You need a real story before the A/B test has any value.
+
+**First-time speaker.** If the user has never submitted a CFP before, lean toward making Abstract A the safer, more structured option and Abstract B the bolder swing. Explain the risk profile in concrete terms so the speaker can make an informed bet. Recommend starting with Abstract A for a first submission and note conferences that welcome new speakers (DevConf, All Things Open, PyCon, DjangoCon).
+
+**Unshipped product or pre-release work.** If the talk covers something not yet in production, both abstracts must be honest about it. One abstract can frame the work as "design decisions and early results" while the other can take a forward-looking angle on open questions. Neither should fabricate production metrics. Make the pre-release status a feature of the narrative, not a liability to hide.
+
+**Unusual CFP requirements.** If the user mentions a conference that requires nonstandard fields (video submission, diversity statement, extended outline), generate those fields for both abstracts. The A/B comparison should extend to every required section, not just the abstract body.
+
 ## Chain of Thought (work through these steps silently before writing anything)
 
 **Step 1: Name the core contribution.** One sentence. What does this talk give the audience that they cannot get from a blog post, a README, or a vendor demo? This sentence anchors both abstracts and prevents them from drifting into vagueness.
@@ -92,3 +102,7 @@ Abstract A (safe, evidence-led) opens with: "We serve 200 models on hardware tha
 Abstract B (bold, contrarian) opens with: "Most GPU scheduling talks tell you to buy smarter hardware. We did the opposite: we stopped trusting the scheduler and built a routing layer that treats models like cattle, not pets. Our inference costs dropped 73%."
 
 Abstract A is the reliable hand: clear value, specific numbers, reviewers know what they are getting. Abstract B is the swing: it challenges conventional wisdom, and a reviewer who values originality will champion it in committee. A reviewer who wants safe picks will score it lower. The speaker should submit A to conferences where the committee is conservative (Red Hat Summit, enterprise tracks) and B to conferences that reward provocation (FOSDEM, SREcon, KubeCon experience reports).
+
+## Next Steps
+
+After generating your A/B abstracts, run `/cfp-review` on the version you plan to submit for scored feedback and concrete rewrites before the deadline.

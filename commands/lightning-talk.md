@@ -19,6 +19,16 @@ Your proposal needs to prove you understand this. Every word in a lightning talk
 **Input:** $ARGUMENTS
 Parse the input for a topic or subject area (required) and a conference name (optional).
 
+## Handling Edge Cases (check before proceeding)
+
+**Vague topic with no specific angle.** If the input is broad ("something about containers" or "maybe testing"), do NOT guess and generate a generic lightning talk. Ask 2 to 3 pointed questions: What single trick, tool, or insight do you want people to remember? What would you demo in 90 seconds? What surprised you recently? A lightning talk with a vague topic is dead on arrival. The format demands precision.
+
+**First-time speaker.** Lightning talks are the best entry point for new speakers. If the user mentions this is their first talk, say so explicitly and frame it as a strength: five minutes is long enough to deliver real value and short enough that nerves do not compound. Recommend lightning talk tracks at conferences that welcome new voices (DevConf, PyCon, All Things Open). A strong lightning talk is also the fastest way to build a speaking track record for future full-length submissions.
+
+**Unshipped product or pre-release work.** If the topic covers something not yet released, be direct. A lightning talk can frame pre-release work as "here is what we are building and the one decision that changed everything," but it cannot claim production results that do not exist. Five minutes leaves no room for hedging. Either the insight is real or the talk falls flat.
+
+**Unusual CFP requirements.** If the user mentions a conference requiring a video submission or other nonstandard fields, generate those sections too. For video pitches: keep it under 60 seconds, lead with the hook, and demonstrate the energy level the format demands.
+
 ## Think Step by Step
 
 Before writing anything, work through this sequence internally. Do not skip steps. The thinking is what separates a tight proposal from a rambling one.
@@ -99,3 +109,7 @@ Title: "Stop Writing kubectl get -o jsonpath"
 Abstract: "You wrote `kubectl get pods -o jsonpath='{.items[*].metadata.name}'` again today. So did I. One plugin replaces every jsonpath query you have ever written with a single interactive command. Live demo: I will install it, query a 200-pod cluster, and filter to the five pods that are about to OOMKill, all in under 90 seconds."
 
 One idea. One tool. One demo. The reviewer can picture exactly what happens on stage and why it is worth five minutes of a packed schedule.
+
+## Next Steps
+
+After generating your lightning talk proposal, run `/cfp-review` to get scored feedback and sharpen the hook before submitting.

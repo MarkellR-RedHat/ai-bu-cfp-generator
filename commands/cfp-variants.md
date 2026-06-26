@@ -12,6 +12,16 @@ $ARGUMENTS
 
 Parse the input for a talk topic, technical area, or project name. If the input includes context about the speaker's experience or results, use that to ground each variant in specifics.
 
+## Handling Edge Cases (check before proceeding)
+
+**Vague topic with no formed talk.** If the input is broad ("something about Kubernetes" or "AI stuff"), do NOT generate three vague variants. Ask 3 to 4 sharpening questions first: What specific problem have you solved? What surprised you? What would you tell a colleague over coffee? Three variants of a vague idea are three flavors of generic. You need a real story before the variants have strategic value.
+
+**First-time speaker.** If the user is new to speaking, make at least one variant a straightforward problem/solution structure. This gives the speaker a safe submission for their first conference while the other variants let them take bigger swings. Note conferences that welcome new speakers (DevConf, All Things Open, PyCon, DjangoCon) in the conference-specific guidance.
+
+**Unshipped product or pre-release work.** If the talk covers something not yet in production, all three variants must be honest about it. The story arc variant can frame the work as a design journey. The problem/solution variant can focus on early benchmarks and decisions. The comparison variant can evaluate approaches without claiming production outcomes you do not yet have. Never fabricate metrics in any variant.
+
+**Unusual CFP requirements.** If the user mentions a conference requiring nonstandard fields (video submission, diversity statement, extended outline), generate those fields for the recommended variant and note how the framing would shift for the other two.
+
 ## Chain of Thought Process
 
 Work through these steps explicitly before generating output.
@@ -99,3 +109,7 @@ These are the same talk with different titles. A reviewer who reads all three le
 - Variant 3 (Comparison): "GPU Scheduling: Bin-Packing vs. Topology-Aware vs. Time-Slicing in Production" -- opens with "We benchmarked three GPU scheduling strategies on the same 48-node cluster over 90 days. The winner was not the one we expected."
 
 Each of these wins with a different reviewer. The first wins the practitioner who values war stories. The second wins the implementer who wants something to deploy Monday. The third wins the architect comparing strategies.
+
+## Next Steps
+
+After picking your strongest variant, run `/cfp-review` to get scored feedback and paste-ready rewrites before submitting.

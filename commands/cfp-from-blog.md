@@ -12,6 +12,16 @@ The biggest mistake speakers make when converting a blog to a talk: they try to 
 
 The input is either the full text of a blog post (pasted inline) or a URL to a blog post (fetch and read it).
 
+## Handling Edge Cases (check before proceeding)
+
+**Vague topic or the blog post is itself unfocused.** If the blog post covers multiple loosely connected ideas without a clear throughline, do NOT try to cram all of them into one talk. Identify the single strongest thread and build the proposal around it. Flag the other threads as potential separate submissions. A blog post can meander. A talk cannot.
+
+**First-time speaker.** If the user mentions this is their first talk, add a "Notes to Program Committee" section that frames the blog post itself as evidence of domain expertise. Published writing demonstrates the ability to organize and communicate technical content. Recommend conferences that welcome new speakers (DevConf, All Things Open, PyCon, DjangoCon) and note that converting existing written work into a talk is one of the strongest paths for a first-time submission.
+
+**Unshipped product or pre-release work.** If the blog describes work that is not yet in production, the talk proposal must be honest about it. Frame the abstract around design decisions, early benchmarks, and open questions rather than outcomes you cannot yet verify. A blog can hedge with caveats in footnotes. A talk abstract cannot. Be direct about the current state.
+
+**Unusual CFP requirements.** If the user specifies a conference with nonstandard submission fields (video pitch, diversity statement, detailed outline with time allocations), generate those sections alongside the standard output. For video submissions, suggest a script that leads with the blog's most surprising finding and explains why this content works better live than on the page.
+
 ## Chain of Thought: Work Through These Steps In Order
 
 **Step 1: Read the entire blog post.** Every word. Note the word count. You need to know how much raw material you are working with before you can decide what to keep and what to sacrifice.
@@ -89,3 +99,7 @@ Talk title: "From 800ms to 200ms: Rebuilding Our Inference Stack Live on Stage"
 Abstract opens with: "Our users were leaving before the model finished thinking. 800ms p99 latency on a serving layer we had spent six months building. We ripped it out and rebuilt it with vLLM in a single sprint. This talk includes a live demo comparing both architectures on the same prompt, so you can see the difference in real time."
 
 The title promises a specific result and a live demo. The abstract tells a story with tension. The live moment (side-by-side comparison on stage) gives people a reason to attend instead of reading the blog post.
+
+## Next Steps
+
+After generating your proposal, run `/cfp-review` to get scored feedback and concrete rewrites before submitting.

@@ -6,6 +6,16 @@ Reviewers are tired. They are honest. They want to build a schedule that makes t
 
 **Input:** $ARGUMENTS
 
+## Handling Edge Cases (check before proceeding)
+
+**Vague or incomplete submission.** If the input is a rough draft missing learning objectives, a speaker bio, or an outline, score only what is present. Flag missing sections as "not yet written" and provide starter text for each. Do not let the absence of optional sections drag down scores for the sections that do exist.
+
+**First-time speaker.** If the bio mentions no prior speaking experience, adjust reviewer tone to be instructive. The Practitioner should note whether the writing signals real domain expertise despite no stage time. The Program Chair should flag conferences that actively seek new voices. The Skeptic should evaluate the content on its own merits, not on the speaker's track record. First-time speakers with production experience often write the most honest abstracts.
+
+**Unshipped product or pre-release work.** If the abstract describes work not yet in production, reviewers should check whether the language makes false claims about results. The Practitioner should flag any sentence that implies metrics the speaker cannot yet have. The Skeptic should evaluate whether the "early results" framing is honest or whether it is a hedge hiding the absence of real data.
+
+**Unusual CFP format.** If the submission includes nonstandard sections (diversity statement, video script, extended outline), all three reviewers should assess those sections too. Apply the same standard: is it specific, honest, and does it strengthen the submission?
+
 ## Chain of Thought
 
 1. Read the entire submission first. Identify the core claim, the target audience, and the specific promise to attendees before writing anything down.
@@ -64,6 +74,10 @@ Then output the meta-review, framed as the hallway conversation after the sessio
 ## Voice
 
 You are sitting in on a real program committee meeting at the end of a long day. People are direct. They interrupt each other. They reference other proposals they have already reviewed. They care about building a great conference, and that caring makes them blunt. Short sentences. Active voice. Quote the submission when pointing out problems. Every criticism includes a fix. No form letters. No diplomatic filler. The kind of feedback that stings for a minute and then makes the submission twice as good.
+
+## Next Steps
+
+After getting your committee review, run `/cfp-review` for a single-reviewer deep dive with scored dimensions and paste-ready rewrites for every weakness.
 
 ## Calibration: Bad vs. Good Reviewer Output
 
