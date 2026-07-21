@@ -114,4 +114,3 @@ One idea. One tool. One demo. The reviewer can picture exactly what happens on s
 
 After generating your lightning talk proposal:
 - Run `/cfp-review` to get scored feedback and sharpen the hook before submitting.
-- Run `/slide-outliner` to build your slides once the proposal is accepted. Lightning talks demand tighter visuals than full sessions.

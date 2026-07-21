@@ -196,13 +196,10 @@ Rough idea
 Accepted?
   |
   v
-/slides  (build the deck, from slide-outliner)
-  |
-  v
 /review-as  (dry-run the talk with simulated audience feedback, from review-as-persona)
   |
   v
-/talk-to-blog  -->  /style-check  (publish the companion post, from style-checker)
+/talk-to-blog  (publish the companion post)
 ```
 
 The pattern that works best for me: run `/cfp-variants` first to find the strongest angle, then pass the winner through `/cfp-review` twice. The second pass catches the subtle issues the first rewrite introduced.

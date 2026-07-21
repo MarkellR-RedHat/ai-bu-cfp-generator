@@ -114,4 +114,3 @@ Each of these wins with a different reviewer. The first wins the practitioner wh
 
 After picking your strongest variant:
 - Run `/cfp-review` to get scored feedback and paste-ready rewrites before submitting.
-- Run `/slide-outliner` to start building the deck once your proposal is accepted.

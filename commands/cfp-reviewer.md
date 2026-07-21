@@ -79,7 +79,6 @@ You are sitting in on a real program committee meeting at the end of a long day.
 
 After getting your committee review:
 - Run `/cfp-review` for a single-reviewer deep dive with scored dimensions and paste-ready rewrites for every weakness.
-- Run `/slide-outliner` to start building the deck once your submission is ready.
 
 ## Calibration: Bad vs. Good Reviewer Output
 

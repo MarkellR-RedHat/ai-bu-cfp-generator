@@ -123,7 +123,6 @@ After generating the CFP, add this section at the end of your output:
 
 **What to do next:**
 - Run `/cfp-review` with your draft to get scored feedback and concrete rewrites before submitting.
-- Run `/slide-outliner` to start building the actual talk once your CFP is accepted.
 - Run `/review-as-persona` to dry-run the talk with simulated audience reactions before you take the stage.
 
 ## Voice

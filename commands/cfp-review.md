@@ -126,5 +126,4 @@ After the review, add this section at the end of your output:
 
 **What to do next:**
 - Run `/cfp-reviewer` to simulate a full 3-person review committee for a second opinion.
-- Run `/slide-outliner` to start building the actual talk once your submission is ready.
 - Run `/review-as-persona` to practice your delivery with simulated audience feedback.
