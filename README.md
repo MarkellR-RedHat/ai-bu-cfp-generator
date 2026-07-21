@@ -196,13 +196,13 @@ Rough idea
 Accepted?
   |
   v
-/slide-outliner  (build the deck)
+/slides  (build the deck, from ai-bu-slide-outliner)
   |
   v
-/review-as-persona  (dry-run the talk with simulated audience feedback)
+/review-as  (dry-run the talk with simulated audience feedback, from ai-bu-review-as-persona)
   |
   v
-/talk-to-blog  -->  /style-checker  (publish the companion post)
+/talk-to-blog  -->  /style-check  (publish the companion post, from ai-bu-style-checker)
 ```
 
 The most productive pattern we have seen: run `/cfp-variants` first to find the strongest angle, then pass the winner through `/cfp-review` twice. The second review pass catches the subtle issues the first rewrite introduced.
