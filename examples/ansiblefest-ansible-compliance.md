@@ -1,6 +1,6 @@
-# Example: Red Hat Summit CFP - Ansible Compliance
+# Example: AnsibleFest CFP - Ansible Compliance
 
-Generated with: `/cfp automating compliance checks with Ansible across a large RHEL fleet, Red Hat Summit`
+Generated with: `/cfp automating compliance checks with Ansible across a large RHEL fleet, AnsibleFest`
 
 ---
 
@@ -30,7 +30,7 @@ By the end of this session, you will have a reusable pattern for building your o
 **5:00-12:00 - Inventory and architecture design (7 min)**
 - Structuring Ansible inventories by security zone and environment
 - Separating scanning, remediation, and reporting into pipeline stages
-- Integration with Red Hat Satellite for host management
+- Integration with AWX for inventory and host management
 
 **12:00-22:00 - Remediation playbooks (10 min)**
 - Using ansible-role-rhel-system-roles for baseline configuration
@@ -69,8 +69,8 @@ By the end of this session, you will have a reusable pattern for building your o
 
 **Breakout Session (40 min)**
 
-This content is best suited for a Red Hat Summit breakout session. It covers a complete architecture with real production results and includes a live demo. The depth is appropriate for 40 minutes. A lab version covering the hands-on remediation workflow could work as a separate 90-minute submission.
+This content is best suited for an AnsibleFest breakout session. It covers a complete architecture with real production results and includes a live demo. The depth is appropriate for 40 minutes. A lab version covering the hands-on remediation workflow could work as a separate 90-minute submission.
 
 ## Speaker Bio Template
 
-"[Name] is a [role] at [company], where they lead infrastructure automation for a fleet of [N] RHEL hosts across [N] data centers. They have been building Ansible-based compliance pipelines for [N] years and have contributed to [relevant open source project or Red Hat community]."
+"[Name] is a [role] at [company], where they lead infrastructure automation for a fleet of [N] RHEL hosts across [N] data centers. They have been building Ansible-based compliance pipelines for [N] years and have contributed to [relevant open source project or the Ansible community]."

@@ -1,12 +1,12 @@
 # Conference CFP Tips and Reference
 
-Reference for conference Call for Proposals (CFP) submissions. What reviewers look for, common mistakes, templates, and tactical advice for 27+ conferences.
+Basically everything I've collected about getting conference talks accepted: what reviewers look for, common mistakes, templates, and tactical advice for 27+ conferences.
 
 ---
 
 ## Conference Directory
 
-Word limits, session formats, review processes, timelines, and tactical tips for 27 conferences. Always verify against the current CFP form before submitting, as limits and formats change year to year.
+Word limits, session formats, review processes, timelines, and tactical tips for 27 conferences. Double-check the current CFP form before you submit, since limits and formats change year to year.
 
 ### KubeCon / CloudNativeCon (CNCF)
 
@@ -18,15 +18,15 @@ Word limits, session formats, review processes, timelines, and tactical tips for
 - **CFP timeline:** NA typically closes late May/early June for a November conference. EU typically closes in October for a March/April conference.
 - **Tactical tip:** Co-present with an end-user customer. CNCF explicitly prioritizes end-user perspectives over vendor-driven content. A vendor plus end-user pairing consistently scores higher than two vendor employees.
 
-### Red Hat Summit
+### DevOpsDays
 
-- **Abstract:** 200 words. **Description:** 500 words.
-- **Session types:** Breakout presentation (40 min), Interview/panel, Hands-on lab, Expo hall theater (short form), Lightning Talk (10 min). Session types may be adjusted during selection.
-- **Review process:** Red Hat subject matter experts review and rate each proposal. Not blind. Reviewers look for original, well-written abstracts, compelling topics, and clear takeaways.
-- **What reviewers prioritize:** Advanced technical content (explicitly stated for 2026), business impact and outcomes, customer and partner co-presentations, cross-product integration stories (e.g., OpenShift + Ansible + RHEL).
-- **Acceptance rate:** Not publicly disclosed.
-- **CFP timeline:** Typically opens in October, closes in November for a May conference. Notifications in February.
-- **Tactical tip:** Frame your talk around a customer outcome, not a product feature. Red Hat Summit reviewers want to see how technology solved a real business problem. Lead with the problem and the measurable result.
+- **Abstract:** Varies by city, typically 200-300 words plus notes to organizers.
+- **Session types:** Talk (30 min), Ignite (5 min, 20 slides auto-advancing every 15 seconds), Open Spaces (attendee-proposed discussions, usually in the afternoon).
+- **Review process:** Each city event is independently organized with its own committee and CFP. Many cities review anonymized proposals. Selection criteria vary by event.
+- **What reviewers prioritize:** Practitioner stories over vendor content, culture and process topics alongside tooling, local community relevance, new voices.
+- **Acceptance rate:** Varies widely by city. Smaller regional events are far less competitive than the flagship cities.
+- **CFP timeline:** Events run year-round worldwide, each with its own CFP window. Check devopsdays.org for the city you want.
+- **Tactical tip:** Ignite talks are a low-stakes entry point, but the auto-advancing format punishes improvisation. If you submit an Ignite, rehearse it to the second. And if your topic is culture or process rather than tooling, DevOpsDays is one of the few conferences where that is a first-class track.
 
 ### DevConf.CZ
 
@@ -82,10 +82,10 @@ Word limits, session formats, review processes, timelines, and tactical tips for
 
 - **Abstract:** 200 words. **Description:** 500 words.
 - **Session types:** Breakout (40 min), Workshop (90 min), Lightning Talk (10 min).
-- **Review process:** Review by Ansible community and Red Hat subject matter experts.
+- **Review process:** Review by the Ansible community and project maintainers.
 - **What reviewers prioritize:** Real-world automation stories with measurable outcomes, code examples (playbooks, roles, collections), operations-focused content.
 - **Acceptance rate:** Not publicly disclosed.
-- **CFP timeline:** Often co-located with Red Hat Summit. Check the Summit CFP timeline.
+- **CFP timeline:** Varies by event and region. Check the Ansible community events calendar for current dates.
 - **Tactical tip:** Show your code. AnsibleFest reviewers expect to see actual playbooks, roles, or collection examples. A talk about automation strategy without concrete code samples will lose to one that shows the YAML.
 
 ### All Things Open
@@ -271,7 +271,7 @@ Word limits, session formats, review processes, timelines, and tactical tips for
 
 ## What Reviewers Actually Prioritize
 
-Based on publicly available reviewer guidelines from major conferences.
+None of this is guesswork. It's all pulled from publicly available reviewer guidelines at major conferences.
 
 ### KubeCon / CloudNativeCon (CNCF)
 
@@ -298,14 +298,14 @@ PyCon publishes detailed reviewer guidelines:
 - **Speaker experience is secondary.** PyCon explicitly tells reviewers not to weigh speaker experience heavily. A first-time speaker with a clear, well-scoped proposal beats a veteran with a vague one.
 - **Outline quality.** PyCon reviewers read your outline carefully. A strong outline with clear progression signals a well-prepared talk.
 
-### Red Hat Summit
+### Open Source Summit (Linux Foundation)
 
-Red Hat subject matter experts review each proposal looking for:
-- **Advanced technical content.** Red Hat Summit 2026 explicitly asked for content that goes beyond the basics, offering deeper insights and more technical detail.
-- **Original, well-written abstracts.** Clear writing signals a clear thinker. Reviewers look for compelling topics with obvious takeaways.
-- **Customer and partner stories.** Co-presentations with customers or partners are strongly encouraged. Real-world adoption stories carry more weight than theoretical content.
-- **Cross-product integration.** Talks that show how multiple Red Hat technologies work together (OpenShift + Ansible + RHEL, for example) are valued for demonstrating ecosystem breadth.
-- **Business impact.** Connect technical decisions to measurable business outcomes whenever possible.
+The Linux Foundation program committee reviews each proposal looking for:
+- **Vendor-neutral content.** Frame the talk around the open source project and the problem it solves, not a product. Thinly veiled product pitches are consistently rejected.
+- **Original, specific writing.** Submissions that lean heavily on AI-generated or templated text are flagged for lacking the specificity needed to evaluate technical depth.
+- **Fresh content.** Talks presented at CNCF or Linux Foundation events within the past year are not accepted. Bring something new or bring new results.
+- **Diverse speakers.** All-male panels are not accepted, and the committee actively seeks a diverse speaker lineup.
+- **Practical value for a broad audience.** Open Source Summit spans many tracks. The strongest proposals are useful to attendees outside your immediate niche.
 
 ### SREcon (USENIX)
 
@@ -335,7 +335,7 @@ Ranked from most to least impactful based on consistent patterns across reviewer
 
 ## Common Rejection Reasons
 
-Fourteen patterns that consistently lead to rejected proposals, based on reviewer feedback from multiple conferences.
+Fourteen patterns that consistently sink proposals, based on reviewer feedback from multiple conferences. Honestly, I've committed at least half of these myself.
 
 1. **Too vague.** The abstract reads like a marketing blurb with no concrete content. "In this talk, we will explore the exciting world of..." tells the reviewer nothing.
 
@@ -369,7 +369,7 @@ Fourteen patterns that consistently lead to rejected proposals, based on reviewe
 
 ## Templates for Different Talk Formats
 
-Fill-in-the-blank templates for common session types. Replace all [bracketed placeholders] with your specific content.
+Fill-in-the-blank templates for common session types. Swap out every [bracketed placeholder] for your own content.
 
 ### Standard Talk (30-40 minutes)
 
@@ -494,7 +494,7 @@ The panel will address:
 
 ## The Submission Checklist
 
-Organized by phase. Check each item before moving to the next stage.
+Organized by phase. Work through each item before moving on to the next stage.
 
 ### Before Writing
 
@@ -623,11 +623,11 @@ Quick-reference notes for tailoring your submission to specific events.
 - Co-presenting with an end user strengthens your submission.
 - You are limited to 3 submissions. If you are on more than 3, all may be removed from review.
 
-### Red Hat Summit
-- Business impact matters. Connect technical content to measurable outcomes.
-- Cross-product integration stories do well (e.g., OpenShift + Ansible + RHEL).
-- Customer co-presentations are strongly encouraged.
-- The 2026 CFP explicitly asked for more advanced content. Beginner overviews are less likely to be accepted.
+### Open Source Summit
+- Vendor-neutral framing is non-negotiable. Even if you work for a vendor, center the open source project.
+- Limit of 2 submissions per speaker. Panels require all speaker names at submission, and all-male panels are not accepted.
+- Talks presented at CNCF or Linux Foundation events within the past year are rejected. Bring new material.
+- AI-generated or templated submissions are flagged. Write with specifics from your own experience.
 
 ### DevConf.CZ / DevConf.US
 - Community and upstream focus. Show your contributions.

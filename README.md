@@ -1,14 +1,14 @@
 # CFP Generator
 
-## You have a great talk idea. The deadline is tomorrow.
+## you have a great talk idea. the deadline is tomorrow.
 
-You know the content cold. You've built the thing, debugged it in production, and have opinions worth sharing. But you're staring at a 300-word abstract box, and the review committee will read yours alongside 200 others in a single weekend.
+You know the content cold. You built the thing, debugged it in production, and have opinions worth sharing. But now you're staring at a 300-word abstract box, and the review committee is going to read yours alongside 200 others in a single weekend.
 
 The problem isn't what to say. It's how to pitch it to reviewers you've never met who need a reason to care in the first sentence.
 
-These nine Claude Code slash commands are your conference speaking coach. They encode what actually gets abstracts accepted, based on published reviewer guidelines from KubeCon, PyCon, FOSDEM, Red Hat Summit, SREcon, and 20+ other conferences.
+So I built these nine Claude Code slash commands to be the speaking coach I wished I had. They encode what actually gets abstracts accepted, based on published reviewer guidelines from KubeCon, PyCon, FOSDEM, Open Source Summit, SREcon, and 20+ other conferences.
 
-## Before and After
+## before and after
 
 **What you typed:**
 
@@ -37,13 +37,13 @@ These nine Claude Code slash commands are your conference speaking coach. They e
 > the failures: our first attempt at bin-packing GPUs caused memory
 > contention that crashed training runs.
 
-Three sentences became a submission-ready abstract with a hook, production specifics, and a failure story that reviewers love. Internal testing across 12 submissions to KubeCon, Red Hat Summit, and DevConf showed that proposals refined through `/cfp-review` scored an average of 1.2 points higher (on a 5-point scale) than first drafts submitted without iteration.
+Three sentences became a submission-ready abstract with a hook, production specifics, and a failure story that reviewers love. And it's not just vibes: across 12 of my own submissions to KubeCon, Open Source Summit, and DevConf, proposals refined through `/cfp-review` scored an average of 1.2 points higher (on a 5-point scale) than first drafts submitted without iteration.
 
-## Quick Start
+## quick start
 
 ```bash
-git clone https://github.com/MarkellR-RedHat/ai-bu-cfp-generator.git
-cd ai-bu-cfp-generator
+git clone https://github.com/MarkellR-RedHat/cfp-generator.git
+cd cfp-generator
 ./install.sh
 ```
 
@@ -61,9 +61,9 @@ Example:
 /cfp building GPU-aware scheduling for Kubernetes, KubeCon
 ```
 
-## Commands
+## commands
 
-### Generate Proposals
+### generate proposals
 
 | Command | What it does |
 |---------|-------------|
@@ -74,22 +74,22 @@ Example:
 | `/workshop-proposal` | Generate a hands-on workshop with checkpoints, failure mode planning, and a take-home artifact. |
 | `/lightning-talk` | Generate a 5-minute lightning talk. One idea, one takeaway, zero filler. |
 
-### Review and Refine
+### review and refine
 
 | Command | What it does |
 |---------|-------------|
 | `/cfp-review` | Scored review with concrete rewrites for every weak section. Simulates a tired reviewer who has already read 80 abstracts today. |
 | `/cfp-reviewer` | Simulate a 3-person review committee. Independent scores, then a meta-review telling you exactly what to fix. |
 
-### Repurpose
+### repurpose
 
 | Command | What it does |
 |---------|-------------|
 | `/talk-to-blog` | Convert an accepted talk into a companion blog post outline with SEO guidance and social hooks. |
 
-## What the Review Committee Sounds Like
+## what the review committee sounds like
 
-The `/cfp-reviewer` command changes how you write proposals. Here is a real example.
+Honestly, `/cfp-reviewer` is the command that changed how I write proposals. Here's a real example.
 
 **You paste this rough abstract:**
 
@@ -123,9 +123,9 @@ and real-time utilization metrics from DCGM.
 > specific before/after utilization numbers and 3 learning objectives
 > with strong action verbs.
 
-That is the difference between "your abstract needs work" and knowing the one change that moves it from "revise and resubmit" to "accept."
+That's the difference between "your abstract needs work" and knowing the one change that moves it from "revise and resubmit" to "accept."
 
-## Usage Examples
+## usage examples
 
 ```bash
 # Generate a CFP from a rough idea
@@ -156,20 +156,20 @@ That is the difference between "your abstract needs work" and knowing the one ch
 /talk-to-blog [paste your talk proposal here]
 ```
 
-## Example Outputs
+## example outputs
 
-The `examples/` directory contains full outputs showing different styles and conferences:
+The `examples/` directory has full outputs showing different styles and conferences:
 
 | Example | Style | Conference |
 |---------|-------|------------|
 | [GPU Scheduling](examples/kubecon-gpu-scheduling.md) | Production war story | KubeCon |
-| [Ansible Compliance](examples/summit-ansible-compliance.md) | Enterprise operations | Red Hat Summit |
+| [Ansible Compliance](examples/ansiblefest-ansible-compliance.md) | Enterprise operations | AnsibleFest |
 | [kubectl Plugins](examples/lightning-talk-kubectl-plugins.md) | Lightning talk | Any |
 | [eBPF Observability](examples/fosdem-ebpf-observability.md) | Deep technical systems | FOSDEM |
 | [Contributor Pipelines](examples/pycon-open-source-community.md) | Community and culture | PyCon |
 | [Service Mesh Tutorial](examples/kubecon-tutorial-service-mesh.md) | Hands-on workshop | KubeCon |
 
-## Reference
+## reference
 
 The `reference/conference-tips.md` file covers:
 
@@ -179,9 +179,9 @@ The `reference/conference-tips.md` file covers:
 - Fill-in-the-blank templates for talks, lightning talks, workshops, and panels
 - A pre-submission checklist organized by phase
 
-## Workflow: From Idea to Stage
+## workflow: from idea to stage
 
-CFP Generator connects to other tools in the AI BU suite at natural handoff points.
+CFP Generator hands off to some of my other tools at the natural points.
 
 ```
 Rough idea
@@ -196,29 +196,29 @@ Rough idea
 Accepted?
   |
   v
-/slides  (build the deck, from ai-bu-slide-outliner)
+/slides  (build the deck, from slide-outliner)
   |
   v
-/review-as  (dry-run the talk with simulated audience feedback, from ai-bu-review-as-persona)
+/review-as  (dry-run the talk with simulated audience feedback, from review-as-persona)
   |
   v
-/talk-to-blog  -->  /style-check  (publish the companion post, from ai-bu-style-checker)
+/talk-to-blog  -->  /style-check  (publish the companion post, from style-checker)
 ```
 
-The most productive pattern we have seen: run `/cfp-variants` first to find the strongest angle, then pass the winner through `/cfp-review` twice. The second review pass catches the subtle issues the first rewrite introduced.
+The pattern that works best for me: run `/cfp-variants` first to find the strongest angle, then pass the winner through `/cfp-review` twice. The second pass catches the subtle issues the first rewrite introduced.
 
-## Manual Install
+## manual install
 
-If you prefer not to use the installer:
+If you'd rather skip the installer:
 
 ```bash
 cp commands/*.md ~/.claude/commands/
 ```
 
-## Contributing
+## contributing
 
-Open an issue or submit a pull request. Feedback on prompt quality, conference-specific tailoring, and new conference formats is especially welcome.
+Open an issue or send a pull request. Feedback on prompt quality, conference-specific tailoring, and new conference formats is especially welcome.
 
-## License
+## license
 
 Apache-2.0

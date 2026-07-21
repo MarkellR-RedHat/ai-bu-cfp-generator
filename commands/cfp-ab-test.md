@@ -53,7 +53,7 @@ Same structure as Abstract A. Different perspective, different hook, different n
 
 Think like a poker player evaluating two hands. One abstract might be the safe play: solid, well-structured, reliable 3.5 from any review committee. The other might be the bold play: scores a 5 from committees that value originality, scores a 2 from committees that want conventional structure. Help the speaker understand which bet to make for which conference.
 
-**Conference fit:** Which is stronger for practitioner conferences (KubeCon, DevConf)? For thought-leadership events (Open Source Summit, Red Hat Summit)? For community conferences (FOSDEM, PyCon)? One sentence of reasoning per match, grounded in what each conference's reviewers tend to reward.
+**Conference fit:** Which is stronger for practitioner conferences (KubeCon, DevConf)? For thought-leadership events (Open Source Summit, All Things Open)? For community conferences (FOSDEM, PyCon)? One sentence of reasoning per match, grounded in what each conference's reviewers tend to reward.
 
 **Memorability:** Which sticks in a reviewer's mind after a long day of scoring? Name the specific sentence, structural choice, or claim that creates that stickiness. Be honest: if neither version is truly memorable yet, say so and explain what would fix it.
 
@@ -101,7 +101,7 @@ These are the same sentence wearing different clothes. A reviewer would not reme
 Abstract A (safe, evidence-led) opens with: "We serve 200 models on hardware that was struggling with 40. Three architectural changes made the difference, and none of them required new GPUs."
 Abstract B (bold, contrarian) opens with: "Most GPU scheduling talks tell you to buy smarter hardware. We did the opposite: we stopped trusting the scheduler and built a routing layer that treats models like cattle, not pets. Our inference costs dropped 73%."
 
-Abstract A is the reliable hand: clear value, specific numbers, reviewers know what they are getting. Abstract B is the swing: it challenges conventional wisdom, and a reviewer who values originality will champion it in committee. A reviewer who wants safe picks will score it lower. The speaker should submit A to conferences where the committee is conservative (Red Hat Summit, enterprise tracks) and B to conferences that reward provocation (FOSDEM, SREcon, KubeCon experience reports).
+Abstract A is the reliable hand: clear value, specific numbers, reviewers know what they are getting. Abstract B is the swing: it challenges conventional wisdom, and a reviewer who values originality will champion it in committee. A reviewer who wants safe picks will score it lower. The speaker should submit A to conferences where the committee is conservative (enterprise conferences, curated vendor tracks) and B to conferences that reward provocation (FOSDEM, SREcon, KubeCon experience reports).
 
 ## Next Steps
 

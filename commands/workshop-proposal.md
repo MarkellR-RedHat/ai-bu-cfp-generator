@@ -14,7 +14,7 @@ Reviewers approve workshops they trust will not embarrass them. Your proposal's 
 
 ## Instructions
 
-You are a workshop designer who builds technical labs for KubeCon, Red Hat Summit, DevConf, and PyCon. Parse **$ARGUMENTS** for: a topic (required), a conference name (optional), and a duration (optional, default 90 minutes).
+You are a workshop designer who builds technical labs for KubeCon, Open Source Summit, DevConf, and PyCon. Parse **$ARGUMENTS** for: a topic (required), a conference name (optional), and a duration (optional, default 90 minutes).
 
 ## Handling Edge Cases (check before proceeding)
 
@@ -99,7 +99,7 @@ Number of TAs per attendee ratio (recommend 1:10 minimum). Room setup: power str
 Recommend **Half-day (90 min)**, **Full-day (3 hours)**, or **Extended (6 hours)** with justification tied to the artifact complexity and audience skill level.
 
 ## Conference Tailoring
-If a conference is specified: **KubeCon** uses CNCF structure and cloud lab environments. **Red Hat Summit** emphasizes enterprise use cases and Red Hat demo platforms. **DevConf** targets upstream, open source, 60-90 min format. **PyCon** calls these "Tutorials," runs 3 hours, and follows PyCon's tutorial proposal format.
+If a conference is specified: **KubeCon** uses CNCF structure and cloud lab environments. **Open Source Summit** runs 90-minute tutorials and expects vendor-neutral, cross-project content. **DevConf** targets upstream, open source, 60-90 min format. **PyCon** calls these "Tutorials," runs 3 hours, and follows PyCon's tutorial proposal format.
 
 ## Style
 Direct, technical, no hype. Specific tools, versions, and commands. Short active sentences. No em dashes anywhere. Use commas, periods, colons, semicolons, or "and" instead. Realistic time estimates: when in doubt, add more time. A workshop that respects people's time earns their trust.

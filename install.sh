@@ -20,7 +20,7 @@ echo ""
 
 if [ ! -d "$COMMANDS_DIR" ]; then
   echo "  [ERROR] commands/ directory not found at $COMMANDS_DIR"
-  echo "  Make sure you're running this from the ai-bu-cfp-generator directory."
+  echo "  Make sure you're running this from the cfp-generator directory."
   echo ""
   exit 1
 fi
@@ -33,7 +33,7 @@ if [ "$COMMAND_COUNT" -eq 0 ]; then
   exit 1
 fi
 
-echo "  Found $COMMAND_COUNT commands to install."
+echo "  Found $COMMAND_COUNT commands to install. Copying them over."
 echo ""
 
 # --- Create target directory ---
@@ -59,7 +59,7 @@ for cmd_file in "$COMMANDS_DIR"/*.md; do
 done
 
 echo ""
-echo "  Installed $INSTALLED commands."
+echo "  Installed $INSTALLED commands. Here's what you got:"
 echo ""
 
 # --- Summary ---
@@ -84,5 +84,5 @@ echo "  Try it now:"
 echo ""
 echo "    /cfp building GPU-aware scheduling for Kubernetes, KubeCon"
 echo ""
-echo "  Done."
+echo "  Done. Go write that abstract."
 echo ""
